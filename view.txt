@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zlatamigas.colorconverter.controller.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="200.66665649414062" minHeight="10.0" prefHeight="119.33335367838541" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="368.66667556762695" minHeight="10.0" prefHeight="153.9999796549479" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane hgap="10.0" prefHeight="184.0" prefWidth="657.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="710.6666666666666" minWidth="10.0" prefWidth="569.6666870117188" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.33331298828125" minWidth="10.0" prefWidth="187.66664632161462" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ColorPicker fx:id="colorPicker" onAction="#parameterChangedColorPicker" prefHeight="41.0" prefWidth="189.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <value>
+                  <Color />
+               </value>
+            </ColorPicker>
+            <Rectangle fx:id="rectColorArea" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="103.0" stroke="BLACK" strokeType="INSIDE" width="568.0">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Rectangle>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </GridPane>
+      <GridPane hgap="10.0" GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="4.0" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="0.0" prefWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="140.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="93.0" text="C" />
+            <Label prefHeight="17.0" prefWidth="53.0" text="M" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="49.0" text="Y" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="59.0" text="K" GridPane.rowIndex="3" />
+
+            <Slider fx:id="sliderCMYKc" blockIncrement="1.0E-6" max="1.0" GridPane.columnIndex="1" />
+            <Slider fx:id="sliderCMYKm" blockIncrement="1.0E-6" max="1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Slider fx:id="sliderCMYKy" blockIncrement="1.0E-6" max="1.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Slider fx:id="sliderCMYKk" blockIncrement="1.0E-6" max="1.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+             <TextField fx:id="etCMYKc" GridPane.columnIndex="2" />
+            <TextField fx:id="etCMYKm" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="etCMYKy" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="etCMYKk" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+             <Label prefHeight="17.0" prefWidth="94.0" text="X" GridPane.columnIndex="3" />
+            <Label prefHeight="17.0" prefWidth="95.0" text="Y" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="95.0" text="Z" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="80.0" text="R" GridPane.columnIndex="6" />
+            <Label prefHeight="17.0" prefWidth="104.0" text="G" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="84.0" text="B" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+
+             <Slider fx:id="sliderXYZx" blockIncrement="1.0E-6" max="95.0" GridPane.columnIndex="4" />
+            <Slider fx:id="sliderXYZy" blockIncrement="1.0E-6" max="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Slider fx:id="sliderXYZz" blockIncrement="1.0E-6" max="109.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+
+            <Slider fx:id="sliderRGBr" blockIncrement="1.0" max="255" GridPane.columnIndex="7" />
+            <Slider fx:id="sliderRGBg" blockIncrement="1.0" max="255" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Slider fx:id="sliderRGBb" blockIncrement="1.0" max="255" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+
+             <TextField fx:id="etXYZx" GridPane.columnIndex="5" />
+            <TextField fx:id="etXYZy" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="etXYZz" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <TextField fx:id="etRGBr" GridPane.columnIndex="8" />
+            <TextField fx:id="etRGBg" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <TextField fx:id="etRGBb" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </GridPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>
